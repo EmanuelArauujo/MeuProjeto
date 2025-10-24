@@ -1,1 +1,36 @@
+/*Com base no código desenvolvido na questão anterior, 
+utilize a estrutura switch-case para definir qual operação será realizada, 
+conforme a escolha do usuário em um menu de opções.*/
 
+package Calculadora;
+
+import Java.util.Scanner;
+
+public class CalculadoraSwitchCase() {
+  public static void main (String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Digite o primeiro número: ");
+    double sc = Scanner.nextDouble();
+
+    System.out.print("Digite o segundo número: ");
+    double sc = Scanner.nextDouble();
+
+    System.out.println("Escolha a operação: 1-Adição, 2-Subtração, 3-Multiplicação, 4-Divisão");
+    int opcao = sc.nextInt();
+
+    switch (opcao) {
+
+      case 1: System.out.print("O resultado da soma é: " + (a + b)); break;
+      case 2: System.out.print("O resultado da subtração é: " + (a - b)); break;
+      case 3: System.out.print("O resultado da multiplicação é: " + (a * b)); break;
+      case 4: System.out.print("o resultado da divisão é: " + (a / b)); break;
+      default: System.out.print("Opção inválida...");
+
+      }
+    
+
+    }
+
+
+  }
