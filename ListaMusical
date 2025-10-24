@@ -1,1 +1,40 @@
+/*A academia "GYM POO" possui um sistema de reprodução de músicas contendo cinco botões numerados de 1 a 5. 
+Para reproduzir um gênero musical, é necessário que o usuário pressione dois botões no sistema.
+Os números correspondentes a esses dois botões são somados e o gênero musical correspondente ao resultado da
+soma é reproduzido conforme a lista abaixo. Por exemplo, se os botões pressionados forem 1 e 4, a soma será 5,
+e o gênero “Eletrônica”, será tocado.. Escreva um programa em Java que, dado os dois botões pressionados, 
+determine qual o gênero musical será reproduzido na academia.
+Lista de gêneros: 1 – "Pagode"; 2 – "MPB"; 3 – "Reggae"; 4 – "Forró"; 5 – "Eletrônica"; 6 – "Sertanejo"; 
+7 – "Funk"; 8 –"Rock"; 9 – "Hip Hop"; e 10 – "Gospel".*/
 
+package ListaMusical;
+
+import Java.util.Scanner;
+
+public class ListaMusical(){
+  public static void main (String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Aperte o primeiro botão: ");
+    int b1 = Scanner.nextInt();
+
+    System.out.print("Aperte o segundo botão: ");
+    int b2 = Scanner.nextInt();
+
+    int soma = (b1 + b2);
+
+    String[] generos = {
+      "", "Pagode", "MPB", "Reggae", "Forró", "Eletrônica", "Sertanejo", "Funk", 
+      "Rock", "Hip hop", "Gospel"
+};
+
+  if (soma >= 1 && soma <= 10) {
+      System.out.println("O genero musical é reproduzido: "genero[soma]);
+  } else {
+      System.out.println("Soma inválida...")
+  }
+    
+
+  }
+
+}
