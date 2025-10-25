@@ -1,1 +1,43 @@
+/*6. Desenvolva um programa em Java para auxiliar o gerenciamento de abastecimento de um posto de combustíveis. O programa deve receber o código da opção de combustível e o valor pago pelo cliente. As opções de código são apresentadas a seguir:
+1. Gasolina Comum (R$ 6,10);
+2. Gasolina Aditivada (R$ 6,29);
+3. Álcool (R$ 4,04);
+4. Diesel (R$ 5,96);
+5. Gás Natural Veicular (R$ 4,64).
+A partir do momento em que o cliente escolher a opção e informar o valor a ser pago. O programa deve informar uma das três respostas:
+● "Transação efetuada com sucesso!", caso o valor estiver correto e não existir a necessidade de troco;
+● "Seu troco é de X reais!", caso exista troco, onde X representa o valor a ser entregue ao cliente;
+● "Saldo insuficiente, falta X reais!", caso o valor informado pelo cliente seja insuficiente.*/
 
+package SistemaAbastecimento;
+
+import java.util.Scanner;
+
+public class SistemaAbastecimento {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    double[] precos = {0, 6.10, 6.29, 4.04, 5.96, 4.64}
+
+    System.out.println("Escolha o combustível (1 a 5): ");
+    int codigo = sc.nextInt();
+
+    System.out.print("Valor pago: R$ ");
+    double valor = sc.nextDOuble();
+
+    if (codio < 1 || codigo > 5) {
+        System.out.println("Código inválido.")
+        return;
+}
+double preco = precos[codigo];
+
+  if (valor == preco) {
+    System.out.println("Transação efetuada com sucesso!");
+ } else if (valor > preco) {
+    System.out.println("Seu troco é de R$ " + (valor - preco));
+  } else {
+    System.out.println("Saldo insuficiente, falta R$ " + (preco - valor));
+
+    }
+  )
+)
