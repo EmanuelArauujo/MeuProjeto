@@ -1,1 +1,49 @@
+/*1. Crie um Java Project chamado Aula4 e dentro do projeto, crie um pacote e
+uma classe com o mesmo nome;
+2. Crie o método main;
+3. Declare as variáveis nome, altura e peso;
+4. Faça uma programa no qual calcule o IMC de um usuário após o mesmo
+informar todos os seus dados;
+5. Ao final, o programa deve exibir ao usuário a mensagem do cálculo do IMC.*/
 
+package IMC;
+
+import Java.util.Scanner;
+
+public class IMC () {
+  public static void main (String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    String nome;
+    double altura;
+    float peso;
+
+    System.out.print("Digite um nome: ");
+    nome = Scanner.nextline();
+    System.out.print("Digite um numero pra altura: ");
+    altura = Scanner.nextDouble();
+    System.out.print("Informe um numero em kg pro peso: ");
+    peso = Scanner.nextFloat();
+
+    IMC = peso / (altura * altura);
+
+    System.out.print("O nome é: "+nome);
+    System.out.print("A altura é: "+altura);
+    System.out.print("O peso é: "+peso);
+
+    if ( <=18,5 ) {
+      System.out.print("Abaixo do peso");
+    } else if (imc >= 18.5 && imc <= 24,9 ) {
+      System.out.print("Peso normal");
+    } else if (imc >= 25,0 && imc <= 29,9) {
+      System.out.print("Excesso de peso");
+    } else if (imc >= 30,0 && imc <= 34,9) {
+      System.out.print("Obesidade classe I");
+    } else if (imc >= 35,0 && imc <= 39,9) {
+      System.out.print("Obesidade classe II");
+    } else if (imc >= 40,0) {
+      System.out.print("Obseidade classe III");
+    }
+      
+  }
+}
