@@ -1,1 +1,68 @@
+/*5. Faça um programa em Java que represente um gerenciador de usuários para uma clínica. Ao acessar o sistema,
+o usuário deve realizar um cadastro, informando seu nome, idade, sexo e endereço completo 
+(estado, cidade, rua, nº e CEP). Após o cadastro, o sistema deve exibir uma lista de opções para o usuário 
+com base na seguinte faixa etária e preços de exames:
+● Até 18 anos: R$ 30,00 por tipo de exame.
+● Entre 19 e 25 anos: R$ 50,00 por tipo de exame.
+● Entre 26 e 35 anos: R$ 75,00 por tipo de exame. Página 1/2
+● Entre 36 a 45 anos: R$ 100, por tipo de exame.
+● Entre 46 a 60 anos: R$ 125,00 por tipo de exame.
+● Acima de 60 anos: R$ 150,00 por tipo de exame.
+Logo após, o usuário informa a quantidade de exames a serem realizados e o sistema calcula o valor total a 
+ser pago. Ao final, o sistema deve retornar ao usuário todas os dados.*/
+
+package GerenciadorClinica;
+
+import java.util.Scanner;
+
+public class GerenciadorClinica {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Nome: ");
+    String nome = sc.nextLine();
+
+    System.out.print("Idade: ");
+    int idade = sc.nextInt();
+    sc.nextLine();
+
+     System.out.print("Sexo: ");
+     String sexo = sc.nextLine();
+
+     System.out.print("Estado: ");
+     String estado = sc.nextLine();
+
+      System.out.print("Cidade: ");
+      String cidade = sc.nextLine();
+
+      System.out.print("Rua: ");
+      String rua = sc.nextLine();
+
+      System.out.print("CEP: ");
+      String cep = sc.nextInt();
+
+      System.out.print("Quantidade de exames: ");
+      int exames = sc.nextInt();
+
+      double preco = 0;
+      if (idade <= 18) preco = 30;
+      else if (idade <= 25) preco = 50;
+      else if (idade <= 35) preco = 75;
+      else if (idade <= 45) preco = 100;
+      else if (idade <= 60) preco = 125;
+      else preco = 150;
+
+      double total = preco * exames;
+
+      System.out.print("\nResumo: ");
+      System.out.print("Nome: " + nome);
+      System.out.print("Idade: " +idade);
+      System.out.print("Sexo: " +sexo);
+      System.out.print("Endereço: " + rua + " , " + numero + " - " + cidade + "/" + estado + " - CEP: " + cep);
+      System.out.print("Valor total: R$ " + total);
+
+      
+  }
+}
+
 
