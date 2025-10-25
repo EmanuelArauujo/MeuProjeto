@@ -1,1 +1,52 @@
+/*1. Crie um programa em Java utilizando a estrutura switch-case para
+implementar um menu de serviços, onde as opções disponíveis serão
+baseadas na escolha do usuário. As opções são as seguintes:
+○ 1 - Verificar os detalhes da conta;
+○ 2 - Efetuar a troca de plano;
+○ 3 - Realizar a mudança de endereço;
+○ 4 - Adquirir um novo plano;
+○ 5 - Solicitar a mudança de titularidade.
+○ 0 - Sair da aplicação.*/
 
+package Menu;
+
+import Java.util.Scanner;
+
+public class MenuServicos() {
+  public static void main (String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("___________MENU DE SERVIÇOS_____________");  
+    System.out.print("1- Verificar os detalhes da conta");  
+    System.out.print("2- Efetuar a troca de plano");
+    System.out.print("3- Realizar a mudança de endereço");  
+    System.out.print("4- Adquirir um novo plano");  
+    System.out.print("5- Solicitar a mudança de titularidade");  
+    System.out.print("0- Sair da aplicação"); 
+    System.out.print("Escolha uma opção: ");
+    opcao = scanner.nextInt();
+
+    switch(opcao) {
+    case 1:
+        System.out.println("Detalhes da conta!");
+        break;
+    case 2:
+        System.out.println("Trocar de plano!");
+        break;
+    case 3:
+        System.out.println("Mudança de endereço!");
+        break;
+    case 4:
+        System.out.println("Novo plano!");
+        break;
+    case 5:
+        System.out.println("Mudança de titularidade!");
+        break;
+    case 0:
+        System.out.println("Sair da aplicação!");
+        break;
+    default:
+        System.out.println("Opção inválida!")
+    }
+  }
+}
