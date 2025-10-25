@@ -41,7 +41,7 @@ public class IMC () {
       System.out.print("Obesidade classe I");
     } else if (imc >= 35,0 && imc <= 39,9) {
       System.out.print("Obesidade classe II");
-    } else if (imc >= 40,0) {
+    } else {
       System.out.print("Obseidade classe III");
     }
       
